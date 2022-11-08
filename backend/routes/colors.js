@@ -9,6 +9,7 @@ router.get('/', (req, res) => {
 })
 
 router.get('/:id', async function(req, res) {
+    console.log(`analysing: ${req.params.id}`)
     const url = 'https://' + req.params.id
     const browser = await Puppeteer.launch()
     const page = await browser.newPage()
