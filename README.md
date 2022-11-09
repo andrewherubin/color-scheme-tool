@@ -1,5 +1,7 @@
 # color scheme tool v1.0
 Full-stack application developed using JavaScript that identifies the color scheme of a web page
+# developers
+Andrew Herubin and Jacob Lamberson
 # frontend
 Frontend is developed using React.js
 # backend
