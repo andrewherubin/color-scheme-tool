@@ -1,4 +1,12 @@
-# color-scheme-tool
-Web application used to evaluate the accessibility of web pages for color blind people
-# backend usage
-run 'cd backend' then 'npm install' then 'node server'
+# color scheme tool v1.0
+Full-stack application developed using JavaScript that identifies the color scheme of a web page
+# frontend
+Frontend is developed using React.js
+# backend
+Backend is developed using Express.js
+# usage requirments
+This tool requires Node.js
+# usage for frontend
+From terminal in color-scheme-tool folder: 'cd frontend' > 'npm install' > 'npm start'
+# usage for backend
+From terminal in color-scheme-tool folder: 'cd backend' > 'npm install' > 'node server
