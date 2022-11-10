@@ -37,6 +37,7 @@ router.get('/', async function(req, res) {
         if (!colors[0].includes(n_match[1])) {
             colors[0].push(n_match[1])
             colors[1].push(0)
+            colors[2].push(hex)
         }
         // increment pixel count of color
         ++colors[1][colors[0].indexOf(n_match[1])]
@@ -45,7 +46,7 @@ router.get('/', async function(req, res) {
     colors.sort((a, b) => { return a[1] - b[1] })
     colorLen = colors[1].length > 8 ? 8 : colors[1].length
     console.log('color scheme identified...')
-    res.json({ colors: colors[0].slice(0, colorLen) })
+    res.json({ colors: colors[2].slice(0, colorLen) })
 })
 
 module.exports = router
