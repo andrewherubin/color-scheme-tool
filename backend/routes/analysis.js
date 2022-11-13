@@ -14,7 +14,7 @@ router.get('/', async function(req, res) {
     ** [0] = color name
     ** [1] = pixel count
     */
-    const colors = [[],[]]
+    const colors = [[],[],[]]
     for (let i = 0; i < image.data.length; i+=4) {
         /* 
         ** image.data is a 1-D array of the rgb values of each pixel in the image
