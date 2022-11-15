@@ -18,7 +18,6 @@ router.post('/', jsonParser, async function(req, res) {
     const browser = await Puppeteer.launch()
     const page = await browser.newPage()
     await page.goto(req.body.url)
-    // take a lower quality screenshot to reduce amount of pixels
     await page.screenshot({ path: __dirname+'/screenshot.jpg' })
     browser.close()
     console.log(`screenshot saved for: ${req.body.url}...`)
