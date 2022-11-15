@@ -5,7 +5,6 @@ const router = Express.Router()
 
 // GET analysis on screenshot in system
 router.get('/', async function(req, res) {
-    console.log('opening image...')
     const image = await Image.load(__dirname+'/screenshot.jpg')
     console.log('analyzing image...')
     /*
@@ -28,6 +27,7 @@ router.get('/', async function(req, res) {
     colors.sort((a,b)=>{return a[1]-b[1]})
     // shorten array to at most 8 colors
     const len = colors[0].length > 8 ? 8 : colors[0].length
+    // will hold up to 8 hex values for the color scheme
     const target = []
     // convert color objects to hex values
     colors[0].splice(0, len).forEach((color) => {
@@ -37,6 +37,7 @@ router.get('/', async function(req, res) {
         hex += formatHex(color.b)
         target.push(hex)
     })
+    console.log(`Color scheme found: ${target}`)
     res.json({ colors: target })
 })
 
