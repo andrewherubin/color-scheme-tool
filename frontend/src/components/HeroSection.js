@@ -4,12 +4,15 @@ import React from 'react';
 import '../App.css';
 import { SearchBar } from './SearchBar';
 import './HeroSection.css';
+import Video from './video1.mp4';
 //import logo from '/gif1.gif';
 
 function HeroSection() {
     return (
         <div className='hero-container'>
             
+            <video controls autostart autoPlay loop src={Video} type="video/mp4" />
+
             <h1>Does your website utilize an accessible color scheme?</h1>
             <h2>Lets find out.</h2>
 

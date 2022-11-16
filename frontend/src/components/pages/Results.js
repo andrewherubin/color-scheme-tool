@@ -1,17 +1,14 @@
-
-
 import React from 'react';
 import '../../App.css';
-import { SearchBar } from '../SearchBar';
-import HeroSection from '../HeroSection';
+import ResultsSection from '../ResultsSection';
+import Footer from '../Footer';
 
 function Results() {
     return (
         <>
-            <h2>To get your results, please search a website: </h2>
-            <SearchBar />
+            <ResultsSection />
+            <Footer />
 
-         
         </>
     );
 }
