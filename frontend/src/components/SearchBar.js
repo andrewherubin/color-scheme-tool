@@ -28,7 +28,6 @@ export const SearchBar = ({  }) => {
        // POST target
         await fetch(url+'/target', {
             method: 'POST', // POST request
-            mode: 'cors', // CORS DURING DEV, MAY WANT TO CHANGE LATER
             headers: { 'Content-Type': 'application/json' }, // contains JSON
             body: JSON.stringify(reqJSON)
         }).then((res) => res.json()).then((resData) => { console.log(resData.message) })
