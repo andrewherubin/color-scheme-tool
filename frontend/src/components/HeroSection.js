@@ -7,7 +7,7 @@ import './HeroSection.css';
 import Video from './video1.mp4';
 //import logo from '/gif1.gif';
 
-function HeroSection() {
+function HeroSection(props) {
     return (
         <div className='hero-container'>
             
@@ -16,7 +16,7 @@ function HeroSection() {
             <h1>Does your website utilize an accessible color scheme?</h1>
             <h2>Lets find out.</h2>
 
-             <SearchBar/>
+             <SearchBar setColors={props.setColors}/>
 
         </div>
     );

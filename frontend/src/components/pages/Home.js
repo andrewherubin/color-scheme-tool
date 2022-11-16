@@ -3,10 +3,10 @@ import '../../App.css';
 import HeroSection from '../HeroSection';
 import Footer from '../Footer';
 
-function Home() {
+function Home(props) {
     return (
         <>
-            <HeroSection />
+            <HeroSection setColors={props.setColors} />
             <Footer />
         </>
     );

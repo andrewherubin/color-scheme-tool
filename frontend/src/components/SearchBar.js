@@ -8,7 +8,7 @@ import './Button.css';
 import { Link } from 'react-router-dom';
 import { useRef } from 'react';
 
-export const SearchBar = ({  }) => {
+export const SearchBar = (props) => {
 
     const inputRef = useRef(null);
 
@@ -34,7 +34,10 @@ export const SearchBar = ({  }) => {
         }).then((res) => res.json()).then((resData) => { console.log(resData.message) })
         
         // GET analysis
-        await fetch(url+'/analysis').then((res) => res.json()).then((resData) => { console.log(resData.colors) })
+        await fetch(url+'/analysis').then((res) => res.json()).then((resData) => {
+            console.log(resData.colors)
+            props.setColors(resData.colors)
+        })
     }
     
     return (
@@ -47,7 +50,7 @@ export const SearchBar = ({  }) => {
                 id="message"
                 name="message"
             />
-
+        
             <button
                 onClick={handleClick}    
             >

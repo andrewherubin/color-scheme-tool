@@ -3,10 +3,10 @@ import '../../App.css';
 import ResultsSection from '../ResultsSection';
 import Footer from '../Footer';
 
-function Results() {
+function Results(props) {
     return (
         <>
-            <ResultsSection />
+            <ResultsSection setColors={props.setColors} colors={props.colors} />
             <Footer />
 
         </>

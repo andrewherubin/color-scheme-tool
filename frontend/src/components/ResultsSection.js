@@ -5,16 +5,29 @@ import './HeroSection.css';
 import Video from './video1.mp4';
 //import Colors from '../colors.txt';
 
-function ResultsSection() {
+/*
+** TODO: Conditional Color Rendering
+** props.colors is an array contain 0-8 hex values
+** create divs corresponding to props.colors.length
+** use the corresponding hex values to display colors for those divs
+**
+** create 8 divs with corresponding css ids
+** use a function to change the css values for each id based on the hex values in props.colors
+**
+** for release 2
+** we can settle for just a prettier way of showing the hex values
+*/
+
+function ResultsSection(props) {
     return (
 
         <div className='hero-container'>
 
             <video controls autostart autoPlay loop src={Video} type="video/mp4" />
 
-            <SearchBar />
+            <SearchBar setColors={props.setColors}/>
 
-            <h1>Top 8 Colors:</h1>
+            <h1>Top 8 Colors: {props.colors[0]}</h1>
 
         </div>
     );
