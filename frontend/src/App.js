@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Home from './components/pages/Home';
 import Results from './components/pages/Results';
 import Guidelines from './components/pages/Guidelines';
+import Support from './components/pages/Support';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 
@@ -31,6 +32,7 @@ function App() {
                   <Route exact path="/" element={<Home setColors={newColors} />} />
                   <Route exact path="/project-guidlines" element={<Guidelines />} />
                   <Route exact path="/results" element={<Results setColors={newColors} colors={colorsList} />} />
+                  <Route exact path="/support" element={<Support />} />
               </Routes>
           </Router>
 

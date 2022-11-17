@@ -27,7 +27,15 @@ function ResultsSection(props) {
 
             <SearchBar setColors={props.setColors}/>
 
-            <h1>Top 8 Colors: {props.colors[0]}</h1>
+            <h1>Top 8 Colors:</h1>
+            <h2>1) {props.colors[0]}</h2>
+            <h2>2) {props.colors[1]}</h2>
+            <h2>3) {props.colors[2]}</h2>
+            <h2>4) {props.colors[3]}</h2>
+            <h2>5) {props.colors[4]}</h2>
+            <h2>6) {props.colors[5]}</h2>
+            <h2>7) {props.colors[6]}</h2>
+            <h2>8) {props.colors[7]}</h2>
 
         </div>
     );

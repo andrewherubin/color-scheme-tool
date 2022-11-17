@@ -5,10 +5,11 @@ import { Link } from 'react-router-dom';
 
 function Footer() {
     return (
+
         <div className='footer-container'>
             <section className='footer-subscription'>
                 <p className='footer-subscription-heading'>
-                    Check out our website on Github, or contact us!
+                    Check out our website on GitHub, or contact us!
                 </p>
                 
             </section>
@@ -16,11 +17,12 @@ function Footer() {
                 <div className='footer-link-wrapper'>
                     <div class='footer-link-items'>
                         
-                        <Link to='/sign-up'>Github</Link>
-                        
+                        <a target="_blank"
+                            href="https://github.com/andrewherubin/color-scheme-tool">GitHub</a>
+                    
                     </div>
                     <div class='footer-link-items'>
-                        <Link to='/'>Support</Link>
+                        <Link to='/support'>Support</Link>
                     </div>
                 </div>
               
