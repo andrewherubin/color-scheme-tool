@@ -37,7 +37,7 @@ function Navbar() {
                 <div className='navbar-container'>
 
                     <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-                        ColorChecker <i className='fab fa-typo2' />
+                        Color Scheme Tool <i className='fab fa-typo2' />
                     </Link>
 
                     <div className='menu-icon' onClick={handleClick}>
@@ -66,11 +66,7 @@ function Navbar() {
 
 
                     </ul>
-                   
 
-                    <SearchBar>
-                        
-                    </SearchBar>
 
                 </div>
             </nav>
