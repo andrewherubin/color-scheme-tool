@@ -16,7 +16,7 @@ export const SearchBar = (props) => {
     async function handleClick(data) { // added async to allow await
 
         // DEV URL WILL NEED TO BE CHANGED
-        const url = 'http://localhost:3000'
+        const url = 'https://color-scheme-api-production.up.railway.app'
 
         const reqJSON = { url: inputRef.current.value}
         console.log(`sending POST request for ${reqJSON.url}`);
@@ -26,15 +26,15 @@ export const SearchBar = (props) => {
         ** next param is object with various options
         */
        // POST target
-        await fetch(url+'/target', {
+        await fetch(url+'/site', {
             method: 'POST', // POST request
-            mode: 'cors', // CORS DURING DEV, MAY WANT TO CHANGE LATER
+            mode: 'cors',
             headers: { 'Content-Type': 'application/json' }, // contains JSON
             body: JSON.stringify(reqJSON)
         }).then((res) => res.json()).then((resData) => { console.log(resData.message) })
         
         // GET analysis
-        await fetch(url+'/analysis').then((res) => res.json()).then((resData) => {
+        await fetch(url+'/scheme').then((res) => res.json()).then((resData) => {
             console.log(resData.colors)
             props.setColors(resData.colors)
         })
